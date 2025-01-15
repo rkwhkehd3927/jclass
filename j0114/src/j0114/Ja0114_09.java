@@ -1,6 +1,6 @@
 package j0114;
 
-public class Ja0117_09 {
+public class Ja0114_09 {
 
 	public static void main(String[] args) {
 		int score1 = 0;

@@ -2,7 +2,7 @@ package j0114;
 
 import java.util.Scanner;
 
-public class Ja0117_07 {
+public class Ja0114_07 {
 
 	public static void main(String[] args) {
 		
