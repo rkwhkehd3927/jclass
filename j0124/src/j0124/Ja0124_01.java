@@ -52,24 +52,38 @@ public class Ja0124_01 {
 		
 //		HashMap<String, String> map = new HashMap<String, String>();
 		HashMap<String, Object> map = new HashMap<String, Object>(); // Object 를 넣어주면 list 가능
-		map.put("userId", "aaa");
+		map.put("userId", "aaa"); // map에 저장
 		map.put("userPw", "1111");
 		map.put("userName", "홍길동");
 		map.put("list", list); // Object
 		
-		System.out.println("id: "+map.get("userId2")); // 키값이 없으면 null // null
-		System.out.println("id: "+map.get("userId")); // 키값이 있으면 제대로 출력 // aaa
-		System.out.println("pw: "+map.get("userPw")); // 키값이 있으면 제대로 출력 // 1111
-		System.out.println("list: "+map.get("list")); // list는 이렇게는 제대로 출력 안됨
+		
+		// map 읽어오기
+		System.out.println(map.containsKey("userId")); // key가 존재하는지 확인
+		System.out.println(map.containsValue("1111")); // value 가 존재하는지 확인
+		
+		if(map.containsKey("userId")==true) { 
+			System.out.println(map.get("userId")); // map에서 key에 해당되는 값 출력
+		}
+		
+//		System.out.println("id: "+map.get("userId2")); // 키값이 없으면 null // null
+//		System.out.println("id: "+map.get("userId")); // 키값이 있으면 제대로 출력 // aaa
+//		System.out.println("pw: "+map.get("userPw")); // 키값이 있으면 제대로 출력 // 1111
+//		System.out.println("list: "+map.get("list")); // list는 이렇게는 제대로 출력 안됨
+		
+		// 전체 출력 - Iterator 활용 (이런경우는 거의 없음)
+		Iterator i = map.entrySet().iterator();
+		while(i.hasNext()) {
+			System.out.println(i.next());
+		}
 		
 		// list 를 출력하려면 list 타입으로 형변환 해줘야 가능(현재 Object 타입)
-		ArrayList list2 = (ArrayList)map.get("list");
+//		ArrayList list2 = (ArrayList)map.get("list");
 		
-		for(int i=0;i<list2.size();i++) {
-			Stu s = (Stu)list2.get(i);
-			System.out.println(s.getNo()+","+s.getName());
-			
-		}
+//		for(int i=0;i<list2.size();i++) {
+//			Stu s = (Stu)list2.get(i);
+//			System.out.println(s.getNo()+","+s.getName());
+//		}
 		
 		
 		

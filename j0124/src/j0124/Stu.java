@@ -24,6 +24,18 @@ public class Stu { // extends Object
 		this.total = kor+eng+math;
 		this.avg = this.total/3.0;
 	}
+	
+	Stu(int no, String name, int kor, int eng, int math, int total, double avg, int rank){
+		
+		this.no = no;
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		this.total = total;
+		this.avg = avg;
+		this.rank = rank;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -60,7 +72,7 @@ public class Stu { // extends Object
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public int getAvg() {
+	public double getAvg() {
 		return avg;
 	}
 	public void setAvg(int avg) {
