@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!-- 변수, 흐름 제어(for,if,switch),변수 출력 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jstl</title>
+	</head>
+	<body>
+	<% String sid = "aaa"; %> <%-- 변수 선언 --%>
+	<div>스크립트릿 사용 id: <%= sid %></div> <%-- 출력 --%>
+	
+	<!-- 변수선언 -->
+	<c:set var="id" value="ccc"/> <%-- 변수 선언 --%>
+	<div>jstl 변수값: ${id}</div> <%-- 출력 --%>
+	
+	<c:if test="${id =='bbb' }">
+		<div>id는 bbb입니다.</div>
+	</c:if>
+	<c:if test="${id !='bbb' }">
+		<div>id는 bbb가 아닙니다. 정답: ${id}</div>
+	</c:if>
+	
+	
+	<!-- for문 -->
+<%-- 	<% for(int i=1; i<=19; i++){ %> --%>
+<%-- 	<%}%> --%>
+	
+	<c:forEach begin="1" end="10" step="1" var="i">
+		<div>i변수값: ${i}</div>
+	</c:forEach>
+	
+	<!-- switch문 -->
+	<c:set var='score' value="89" />
+	<c:choose>
+		<c:when test="${score>=90}">
+			<div>성적: A</div>
+		</c:when>
+		<c:when test="${score>=80}">
+			<div>성적: B</div>
+		</c:when>
+		<c:when test="${score>=70}">
+			<div>성적: C</div>
+		</c:when>
+		<c:when test="${score>=60}">
+			<div>성적: D</div>
+		</c:when>
+		<c:otherwise>
+			<div>성적: F</div>
+		</c:otherwise>
+	</c:choose>
+	
+	</body>
+</html>

@@ -26,4 +26,22 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
+    
+    <Resource
+      auth="Container"
+      driverClassName = "oracle.jdbc.driver.OracleDriver"
+      url = "jdbc:oracle:thin:@localhost:1521:orcl"
+      username = "ora_user"
+      password = "1111"
+      name = "ora21"
+      type = "javax.sql.DataSource"
+      maxActive = "50"
+      maxWait = "1000"
+    />
+    	
+    	
+    
+    
+    
+    
 </Context>
