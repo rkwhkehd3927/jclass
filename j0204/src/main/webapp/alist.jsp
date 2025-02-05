@@ -1,4 +1,4 @@
-<%@page import="com.java.www.Member"%>
+<%@page import="com.java.www.controller.Member"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
